@@ -11,9 +11,3 @@ def test_fibonacci():
     assert fibonacci(0) == 0
     assert fibonacci(1) == 1
     assert fibonacci(2) == 1
-
-    print("YAAY")
-
-    
-if __name__ == "__main__":
-    test_fibonacci()
