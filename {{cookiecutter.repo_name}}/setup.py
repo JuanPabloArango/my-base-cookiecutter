@@ -17,15 +17,14 @@ test_requirements = ['pytest','pytest-mock','pytest-cov' ]
 
 if __name__ == "__main__":
 
-    setup(name = "Juan's CookieCutter",
+    setup(name = "{{cookiecutter.project_name}}",
           keywords = "CookieCutter",
-          author = "Juan Pablo Arango",
-          author_email = "juanpabloarangosa@gmail.com",
-          description = "CookieCutter de proyectos de Ciencia de Datos.",
+          author = "{{cookiecutter.author}}",
+          author_email = "{{cookiecutter.mail}}",
+          description = "{{cookiecutter.description}}",
           long_description = readme,
           license = "MIT License",
-          classifiers = ["Development Status :: 1 - Planning",
-                         "Intended Audience :: Developers",
+          classifiers = ["Intended Audience :: Developers",
                          "Natural Language :: Spanish",
                          "License :: OSI Approved :: MIT License",
                          "Programming Language :: Python :: 3",
