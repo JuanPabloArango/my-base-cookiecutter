@@ -4,13 +4,13 @@ import re
 import sys
 
 
-def validate():
+def validate(repo_name, project_folder):
     """Función para hacer unas validaciones previas antes de ejecutar el cookie cutter."""
 
-    repo_name = "{{cookiecutter.repo_name}}"
-    project_folder = "{{cookiecutter.project_folder}}"
+    #repo_name = "{{cookiecutter.repo_name}}"
+    #project_folder = "{{cookiecutter.project_folder}}"
 
-    if not re.match(r"ci_\d+_[a-z]+", repo_name) or \
+    if not re.match(r"ci_\d+_([a-z]+(_)?)+", repo_name) or \
        not repo_name.islower() or \
        repo_name.count("-") > 0 or \
        repo_name.count(" ") > 0:
@@ -19,7 +19,7 @@ def validate():
 
         sys.exit(1)
 
-    if not re.match(r"[a-z]+_([a-z]+_)*", project_folder) or \
+    if not re.match(r"[a-z]+_([a-z]+(_)?)+", project_folder) or \
        not project_folder.islower() or \
        project_folder.count("-") > 0 or \
        project_folder.count(" ") > 0:
