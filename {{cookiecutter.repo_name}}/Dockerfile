@@ -1,6 +1,6 @@
 FROM python:3.7
 
-COPY src/{{cookiecutter.project_folder}} ./
+COPY src/project_folder ./
 
 COPY requirements.txt ./
 
